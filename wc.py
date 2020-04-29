@@ -23,11 +23,11 @@ def file_to_text(filename) :
     lst = []
     for line in fh :
         line.strip()
-        # index = line.find(": <")
-        # line = line[:index]
+        index = line.find(": <")
+        line = line[:index]
         line = line.split()
         for word in line :
-            if len(word) > 0 :
+            if len(word) > 2 :
                 lst.append(word)
     str = ""
     for word in lst :
